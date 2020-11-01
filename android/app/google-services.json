@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1085568414802",
+    "firebase_url": "https://donewall-9a493.firebaseio.com",
+    "project_id": "donewall-9a493",
+    "storage_bucket": "donewall-9a493.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085568414802:android:d427d052b1f9e9b3521b8b",
+        "android_client_info": {
+          "package_name": "com.example.donowall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085568414802-q2jdbjcrvbitqqajv72cdoj79nrkpks9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.donowall",
+            "certificate_hash": "86b2d0486fe8ada4c1b9ba2b67584b916645c750"
+          }
+        },
+        {
+          "client_id": "1085568414802-rnrnhnrvtn1scuk1gbenmjp156ek1c8j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6E1_EO76xY2F7jLuHODO1cnJIBFUXz_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085568414802-rnrnhnrvtn1scuk1gbenmjp156ek1c8j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
