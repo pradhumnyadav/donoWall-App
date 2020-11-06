@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
       builder:(context,snapshot){
         if(snapshot.hasError){
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             home:  Scaffold(
             body: Center(
               child: Text("Error:${snapshot.error}"),
@@ -43,6 +44,8 @@ class MyApp extends StatelessWidget {
                 User user=snapshot.data;
               if(user==null){
                 return MaterialApp(
+            debugShowCheckedModeBanner: false,
+
                   home: LoginPage(),
                 );
 
@@ -51,6 +54,8 @@ class MyApp extends StatelessWidget {
                   return ChangeNotifierProvider(
                     create: (context)=>HospitalDetailProvider(),
                                       child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+
                     home: HomePage(),
                 ),
                   );

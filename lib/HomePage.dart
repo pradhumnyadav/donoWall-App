@@ -24,12 +24,26 @@ class _HomePageState extends State<HomePage> {
             padding: EdgeInsets.zero,
             children: [
               DrawerHeader(
-                child: Text(
-                  "Welcome",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30),
+                
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Welcome",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30),
+                    ),
+                    Padding(padding: EdgeInsets.all(10)),
+                     Text(
+                      "You have the power to save a life",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17),
+                    ),
+                  ],
                 ),
                 decoration: BoxDecoration(
                   color: Colors.redAccent,
@@ -38,7 +52,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               ListTile(
-                title: Text("Function 1"),
+                hoverColor: Colors.black,
+                title: Text("Add New Hospital(only for admins)"),
                 onTap: null,
               ),
               ListTile(
@@ -73,18 +88,28 @@ class _HomePageState extends State<HomePage> {
             )
           ],
         ),
-        backgroundColor: Colors.red[100],
+        backgroundColor: Colors.grey[600],
         body: StreamBuilder<List<HospitalDetails>>(
        stream:hospitaldetailProvider.hospitalDetails ,
 
           builder: (context, snapshot) {
-            return ListView.builder(
-                itemCount: snapshot.data.length,
-                itemBuilder: (context, index) {
+            // return ListView.builder(
+              
+            //     itemCount: snapshot.data.length,
+            //     itemBuilder: (context, index) {
+            //       return HospitalCard(
+            //         hospitalinfo: snapshot.data[index],
+            //       );
+            //     });
+            return GridView.builder( 
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              itemCount: snapshot.data.length ,
+              itemBuilder: (context, index) {
                   return HospitalCard(
-                    hospitalDetails: snapshot.data[index],
+                    hospitalinfo: snapshot.data[index],
                   );
-                });
+                },
+            );
           },
         )
         // body: StreamProvider(create: (BuildContext context)=> firestoreService.getHospitalDetails(),
